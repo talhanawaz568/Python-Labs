@@ -1,0 +1,25 @@
+user_profile = {
+	"name": "Alice",
+	"age": 30,
+	"city": "New York"
+}
+print(user_profile)
+
+
+print("User's Name:", user_profile["name"])
+
+user_profile["age"] = 31
+
+print("Updated User Profile:", user_profile)
+
+user_profile.pop("city")
+
+print("Profile after removing city:", user_profile)
+
+
+#Iterations
+for key, value in user_profile.items():
+	print(f"{key}: {value}")
+
+for key in user_profile.keys():
+	print(f"Key: {key}")
