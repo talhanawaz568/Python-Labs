@@ -1,0 +1,15 @@
+import requests
+response = requests.get("https://alnafi.cloud/")
+print(response.status_code)
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(response.text, 'html.parser')
+
+print(soup.prettify())
+
+title = soup.title.string
+print("Page Title:", title)
+
+links = soup.find_all('a')
+for link in links:
+    print(link.get('href'))
